@@ -1,0 +1,15 @@
+canvas {
+    border-style: solid;
+    border-width: 2px;
+}
+
+.ddmsg {
+    border-style: solid;
+    border-width: 2px;
+    text-align:center;
+    margin-top: 0px;
+    margin-bottom:0px;
+
+    width: 500px;
+    line-height:140px;
+}

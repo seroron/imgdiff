@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/imgdiff.css">
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/imgdiff.js"></script>
+<title>画像比較人 - 手元の画像をお手軽に比較</title>
+</head>
+<body>
+
+<h1>画像比較人</h1>
+
+<p>
+２つの画像を比較し、差分を表示します。
+ブラウザで実行できるので、インストール不要！！
+</p>
+<p>
+また、画像の比較処理は全てブラウザ内で実行されるため、画像はサーバに一切アップロードされません。情報漏洩等は起きないため、安心してお使い下さい。
+</p>
+
+<h2>比較ツール</h2>
+
+<table>
+  <tr>
+    <td>比較画像１</td>
+  </tr>
+  <tr>
+    <td>
+      <p class="ddmsg">ここに、比較したい画像をドラッグ＆ドロップで配置</p>
+      <canvas id="lhsCanvas"></canvas>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td>比較画像２</td>
+  </tr>
+  <tr>
+    <td>
+      <p class="ddmsg">ここに、比較したい画像をドラッグ＆ドロップで配置</p>
+      <canvas id="rhsCanvas"></canvas>
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<form>
+  <input type="button" id="diffBtn" value="比較開始!!"></input>
+</form>
+
+<table>
+  <tr>
+    <td>比較結果</td>
+  </tr>
+  <tr>
+    <td><canvas id="resultCanvas" width="500" height="140"></canvas>
+    </td>
+  </tr>
+</table>
+
+<h2>使い方</h2>
+<p>
+比較画像１、比較画像２それぞれに比較したい画像をドラッグ＆ドロップで配置します。
+</p>
+<p>
+「比較開始!!」ボタンを押すと、比較結果が表示されます。
+</p>
+
+比較結果の見方
+
+
+
+</body>
+</html>
