@@ -12,22 +12,26 @@
 <h1>画像比較人</h1>
 
 <p>
-２つの画像を比較し、差分を表示します。
-ブラウザで実行できるので、インストール不要！！
+２つの画像を比較し、差分を表示します。ブラウザで実行できるので、インストール不要！！
 </p>
 <p>
-また、画像の比較処理は全てブラウザ内で実行されるため、画像はサーバに一切アップロードされません。情報漏洩等は起きないため、安心してお使い下さい。
+また、画像の比較処理は全てブラウザ内で実行されます。画像はサーバに一切アップロードされません。
+情報漏洩等は起きないため、安心してお使い下さい。
 </p>
+<small>
+※このページはHTML5の機能を使用しているため、新しいブラウザでないと動作しません。
+特にIEは10以上である必要があります。
+</small>
 
 <h2>比較ツール</h2>
-
+<h3>比較対象</h3>
 <table>
   <tr>
     <td>比較画像１</td>
   </tr>
   <tr>
     <td>
-      <p class="ddmsg">ここに、比較したい画像をドラッグ＆ドロップで配置</p>
+      <p id="lhsMsg" class="ddmsg">ここに、比較したい画像をドラッグ＆ドロップで配置</p>
       <canvas id="lhsCanvas"></canvas>
     </td>
   </tr>
@@ -39,7 +43,7 @@
   </tr>
   <tr>
     <td>
-      <p class="ddmsg">ここに、比較したい画像をドラッグ＆ドロップで配置</p>
+      <p id="rhsMsg" class="ddmsg">ここに、比較したい画像をドラッグ＆ドロップで配置</p>
       <canvas id="rhsCanvas"></canvas>
     </td>
   </tr>
@@ -51,9 +55,11 @@
   <input type="button" id="diffBtn" value="比較開始!!"></input>
 </form>
 
+<br>
+<h3>比較結果</h3>
 <table>
   <tr>
-    <td>比較結果</td>
+    <td>比較結果画像</td>
   </tr>
   <tr>
     <td><canvas id="resultCanvas" width="500" height="140"></canvas>
@@ -61,17 +67,45 @@
   </tr>
 </table>
 
+<br>
+
+<form>
+  <input type="button" id="saveDiffRet" value="比較結果保存"></input>
+</form>
+
+<br>
+
+<div id="diffRetLegArea">
+  凡例
+  <table id="diffRetLegTable">
+    <tr>
+      <td id="diffRetLegSame">水色</td>
+      <td>同一部分</td>
+    </tr>
+    <tr>
+      <td id="diffRetLegDifferent">紫色</td>
+      <td>差分あり</td>
+    </tr>
+    <tr>
+      <td id="diffRetLegOne">黄色</td>
+      <td>片方の画像にしか存在しない部分（サイズが異なる画像を比較する時に出る）</td>
+    </tr>
+    <tr>
+      <td id="diffRetLegNone">白色</td>
+      <td>両方の画像に存在しない部分（サイズが異なる画像を比較する時に出る）</td>
+    </tr>
+  </table>
+</div>
+
 <h2>使い方</h2>
-<p>
-比較画像１、比較画像２それぞれに比較したい画像をドラッグ＆ドロップで配置します。
-</p>
-<p>
-「比較開始!!」ボタンを押すと、比較結果が表示されます。
-</p>
+<ol type="1">
+<li>比較画像１、比較画像２それぞれに比較したい画像をドラッグ＆ドロップで配置します。</li>
+<li>「比較開始!!」ボタンを押すと、比較結果が表示されます。</li>
+</ol>
 
-比較結果の見方
-
-
-
+<hr>
+<footer>
+<p id="copyright">Copyright (C) 2013 <a href="https://twitter.com/__seroron">seroron</a> All Rights Reserved.</p>
+</footer>
 </body>
 </html>

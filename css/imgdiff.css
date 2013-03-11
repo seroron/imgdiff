@@ -1,6 +1,26 @@
+body {
+    background-color: #ddffff;
+}
+
+h1 {
+    text-align:center;
+    padding: 5px;
+    border-color: #1caacc;
+    border-width: 3px 0px 3px 0px;
+    border-style:solid;
+}
+
+h2 {
+    padding:3px 5px;
+    border-color: #1caacc;
+    border-width:0 0 1px 7px;
+    border-style:solid;
+}
+
 canvas {
     border-style: solid;
     border-width: 2px;
+    background-color: #ffffff;
 }
 
 .ddmsg {
@@ -12,4 +32,46 @@ canvas {
 
     width: 500px;
     line-height:140px;
+    background-color: #ffffff;
+}
+
+#diffBtn {
+    margin: 0px 0px 0px 50px;
+    height: 50px;
+    width: 400px;
+}
+
+#diffRetLegArea {
+    margin: 0px 0px 0px 20px;
+}
+
+table#diffRetLegTable {
+    border: 1px #888888 solid;
+    border-collapse: collapse;
+}
+
+table#diffRetLegTable tr, table#diffRetLegTable td {
+    border: 1px #888888 solid;
+}
+
+td#diffRetLegSame {
+    background-color: #32ffff;
+}
+
+td#diffRetLegDifferent {
+    background-color: #ff64ff;
+}
+
+td#diffRetLegOne {
+    background-color: #ffff64;
+}
+
+td#diffRetLegNone {
+    background-color: #ffffff;
+}
+
+#copyright {
+    text-align: right;
+    margin-top: 3px;
+    font-style: italic;
 }
