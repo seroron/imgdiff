@@ -7,12 +7,12 @@ var ImgDiff = (function(){
         if(loadCnt >= 2) {
             $("#diffBtn").removeAttr("disabled");
         }
-    }
+    };
 
     var decLoadCnt = function() {
         loadCnt--;
         $("#diffBtn").attr("disabled", "disabled");
-    }
+    };
 
     var loadImg = function(event, elem) {
         var file = event.originalEvent.dataTransfer.files[0];
@@ -32,8 +32,8 @@ var ImgDiff = (function(){
                 .attr("src", reader.result);
 
             incLoadCnt();
-        }
-    }
+        };
+    };
 
     var setDDElem = function(msgID, canvasID) {
         $(msgID)
@@ -61,7 +61,7 @@ var ImgDiff = (function(){
         
         $(msgID).show();
         $(canvasID).hide();
-    }
+    };
 
     var renderDiffImg = function() {
         var lhsCanvas = $('#lhsCanvas')[0];
@@ -87,7 +87,7 @@ var ImgDiff = (function(){
         var cx = resultCanvas.getContext("2d");
         var imgData = cx.createImageData(maxw, maxh);
         var data = imgData.data;
-        var len = maxw*maxh
+        var len = maxw*maxh;
         for(var y=0; y<maxh; ++y) {
             for(var x=0; x<maxw; ++x) {
                 if(x<lw && y<lh && x<rw && y<rh) {
@@ -123,7 +123,7 @@ var ImgDiff = (function(){
 
         cx.clearRect(0, 0, maxw, maxh);
         cx.putImageData(imgData, 0, 0);
-    }
+    };
 
     var init = function() {
         setDDElem($('#lhsMsg'), $('#lhsCanvas'));
@@ -134,7 +134,7 @@ var ImgDiff = (function(){
                 renderDiffImg();
             })
             .attr("disabled", "disabled");
-    }
+    };
 
     return {
         init: init
