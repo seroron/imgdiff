@@ -35,42 +35,49 @@ canvas {
     background-color: #ffffff;
 }
 
-#diffBtn {
-    margin: 0px 0px 0px 50px;
+.imgform {
+    margin-top: 1em;
+}
+
+.imgarea {
+    margin-top: 0.5em;    
+    margin-left: 1em;
+}
+
+.btn {
+    margin: 1em 2em 1em 4em;
     height: 50px;
     width: 400px;
 }
 
-#diffRetLegArea {
-    margin: 0px 0px 0px 20px;
-}
-
-table#diffRetLegTable {
+#diffRetLegTable {
     border: 1px #888888 solid;
     border-collapse: collapse;
+    margin-left: 1em;
 }
 
 table#diffRetLegTable tr, table#diffRetLegTable td {
+    padding: 4px;
     border: 1px #888888 solid;
 }
 
-td#diffRetLegSame {
+.diffRetLegSame {
     background-color: #32ffff;
 }
 
-td#diffRetLegDifferent {
+.diffRetLegDifferent {
     background-color: #ff64ff;
 }
 
-td#diffRetLegOne {
+.diffRetLegOne {
     background-color: #ffff64;
 }
 
-td#diffRetLegNone {
+.diffRetLegNone {
     background-color: #ffffff;
 }
 
-#copyright {
+.copyright {
     text-align: right;
     margin-top: 3px;
     font-style: italic;

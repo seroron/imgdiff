@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<meta name="description" content="ブラウザ上で画像の比較ができるサイトです。">
-<meta name="keywords" content="画像比較,ブラウザ,インストール不要">
-<link rel="stylesheet" href="css/imgdiff.css">
-<script src="js/jquery-1.8.3.min.js"></script>
-<script src="js/imgdiff.js"></script>
-<title>画像比較人 - 手元の画像をお手軽に比較</title>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="ブラウザ上で画像の比較ができるサイトです。">
+    <meta name="keywords" content="画像比較,ブラウザ,インストール不要">
+    <link rel="stylesheet" href="css/imgdiff.css">
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/imgdiff.js"></script>
+    <title>画像比較人 - 手元の画像をお手軽に比較</title>
+  </head>
 <body>
 
 <h1>画像比較人</h1>
@@ -26,73 +26,51 @@
 
 <h2>比較ツール</h2>
 <h3>比較対象</h3>
-<table>
-  <tr>
-    <td>比較画像１</td>
-  </tr>
-  <tr>
-    <td>
-      <p id="lhsMsg" class="ddmsg">ここに、比較したい画像をドラッグ＆ドロップで配置</p>
-      <canvas id="lhsCanvas"></canvas>
-    </td>
-  </tr>
-</table>
 
-<table>
-  <tr>
-    <td>比較画像２</td>
-  </tr>
-  <tr>
-    <td>
-      <p id="rhsMsg" class="ddmsg">ここに、比較したい画像をドラッグ＆ドロップで配置</p>
-      <canvas id="rhsCanvas"></canvas>
-    </td>
-  </tr>
-</table>
+<div class="imgform">
+  比較画像1
+  <div class="imgarea">
+    <p id="lhsMsg" class="ddmsg">ここに、比較したい画像をドラッグ＆ドロップで配置</p>
+    <canvas id="lhsCanvas"></canvas>
+  </div>
+</div>
 
-<br>
+<div class="imgform">
+  比較画像2
+  <div class="imgarea">
+    <p id="rhsMsg" class="ddmsg">ここに、比較したい画像をドラッグ＆ドロップで配置</p>
+    <canvas id="rhsCanvas"></canvas>
+  </div>
+</div>
 
-<form>
-  <input type="button" id="diffBtn" value="比較開始!!"></input>
-</form>
+<button type="button" id="diffBtn" class="btn">比較開始!!</button>
 
-<br>
 <h3>比較結果</h3>
-<table>
-  <tr>
-    <td>比較結果画像</td>
-  </tr>
-  <tr>
-    <td><canvas id="resultCanvas" width="500" height="140"></canvas>
-    </td>
-  </tr>
-</table>
+<div class="imgform">
+  比較結果画像
+  <div class="imgarea">
+    <canvas id="resultCanvas" width="500" height="140"></canvas>
+  </div>
+</div>
 
-<br>
-
-<form>
-  <input type="button" id="saveDiffRet" value="比較結果保存"></input>
-</form>
-
-<br>
-
-<div id="diffRetLegArea">
+<div class="imgform">
   凡例
+  
   <table id="diffRetLegTable">
     <tr>
-      <td id="diffRetLegSame">水色</td>
+      <td class="diffRetLegSame">水色</td>
       <td>同一部分</td>
     </tr>
     <tr>
-      <td id="diffRetLegDifferent">紫色</td>
+      <td class="diffRetLegDifferent">紫色</td>
       <td>差分あり</td>
     </tr>
     <tr>
-      <td id="diffRetLegOne">黄色</td>
+      <td class="diffRetLegOne">黄色</td>
       <td>片方の画像にしか存在しない部分（サイズが異なる画像を比較する時に出る）</td>
     </tr>
     <tr>
-      <td id="diffRetLegNone">白色</td>
+      <td class="diffRetLegNone">白色</td>
       <td>両方の画像に存在しない部分（サイズが異なる画像を比較する時に出る）</td>
     </tr>
   </table>
@@ -105,8 +83,9 @@
 </ol>
 
 <hr>
+
 <footer>
-  <p id="copyright">Copyright (C) 2013 <a href="https://twitter.com/__seroron">seroron</a> All Rights Reserved.</p>
+  <p class="copyright">Copyright (C) 2015 <a href="http://www.seroron.com">seroron</a> All Rights Reserved.</p>
 </footer>
 </body>
 </html>
